@@ -112,6 +112,14 @@ button {
     color: #296C82;
     display: block;
     margin: 0 auto;
+    transition-property: background-color, color;
+    transition-duration: 0.24s;
+    transition-timing-function: ease-in-out;
+}
+
+.main__btn:hover {
+    background-color: #80abb8;
+    color: #ffffff;
 }
 
 .selection {
@@ -156,6 +164,13 @@ button {
     text-align: left;
     border: none;
     padding: 16px 20px;
+    transition-property: background-color, color;
+    transition-duration: 0.24s;
+    transition-timing-function: ease-in-out;
+}
+
+.selection__theme:hover {
+    background-color: #c3ecf7;
 }
 
 .selection__theme:not(:last-child) {
@@ -352,5 +367,83 @@ button {
 }
 
 
+@media (max-width: 1024px) {
+    .selection__list {
+        padding-right: 30px;
+    }
 
+    .selection__theme {
+        font-size: 20px;
+    }
+}
 
+@media (max-width: 768px) {
+    .header__container {
+        padding: 0 20px;
+    }
+
+    .main {
+        padding: 40px 20px;
+    }
+
+    .main__title {
+        font-size: 35px;
+    }
+
+    .main__box {
+        padding: 40px;
+    }
+
+    .selection__list {
+        padding-right: 15px;
+    }
+
+    .selection__theme {
+        font-size: 17px;
+        padding: 10px 15px;
+    }
+    .selection__item {
+        margin-bottom: 10px;
+    }
+
+    .selection__result {
+        display: flex;
+        align-items: center;
+    }
+
+    .selection__result-text {
+        display: none;
+    }
+
+    .selection__theme:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .main__btn:not(.result__return) {
+        margin-left: 0;
+        min-width: 100%;
+    }
+
+    .main__form-question::after {
+        bottom: -35px;
+    }
+    
+    .main__subtitle{
+        font-size: 20px;
+    }
+
+    .main {
+        padding: 30px 10px;
+    }
+
+    .main__box {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .selection__result-ratio {
+        font-size: 18px;
+    }
+}
